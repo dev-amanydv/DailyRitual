@@ -1,0 +1,31 @@
+import Link from 'next/link'
+import React from 'react'
+import { FaUserFriends } from 'react-icons/fa'
+import { MdLeaderboard } from 'react-icons/md'
+
+const Social = () => {
+  return (
+    <div className=''>
+      <h1 className='dark:text-[#797979] px-2 text-sm'>Social</h1>
+      <div className='flex py-1 dark:text-[#c5c5c5] px-1  flex-col'>
+
+        <Link href={'/friends'}>
+          <div className='py-1 group flex items-center gap-4 rounded-md cursor-pointer w-full hover:dark:bg-[#242424] px-3'>
+            <div className=' text-[#c5c5c5] group-hover:text-white'><FaUserFriends size={18} /></div>
+            <div className=''>Friends</div>
+          </div>
+        </Link>
+
+        <Link href={'/leaderboard'}>
+          <div className='py-1 group flex items-center gap-4 rounded-md cursor-pointer w-full hover:dark:bg-[#242424] px-3'>
+            <div className=' text-[#c5c5c5] group-hover:text-white'><MdLeaderboard size={18} /></div>
+            <div className=''>Leaderboard</div>
+          </div>
+        </Link>
+
+      </div>
+    </div>
+  )
+}
+
+export default Social
