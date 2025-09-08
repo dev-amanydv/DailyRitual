@@ -6,7 +6,7 @@ import { MdCall } from 'react-icons/md'
 const Support = () => {
   return (
     <div className=''>
-      <h1 className='dark:text-[#797979] px-2 text-sm'>Overview</h1>
+      <h1 className='dark:text-[#797979] px-2 text-[12px]'>Support</h1>
       <div className='flex py-1 dark:text-[#c5c5c5] px-1  flex-col'>
 
         <Link href={'/help'}>

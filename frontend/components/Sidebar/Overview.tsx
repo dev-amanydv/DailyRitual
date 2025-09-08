@@ -12,7 +12,7 @@ const Overview = () => {
 
   return (
     <div className=''>
-      <h1 className='dark:text-[#797979] px-2 text-sm'>Overview</h1>
+      <h1 className='dark:text-[#797979] px-2 text-[12px]'>Overview</h1>
       <div className='flex font-medium py-1 dark:text-[#c5c5c5] px-1  flex-col'>
 
         <Link href={'/dashboard'} >

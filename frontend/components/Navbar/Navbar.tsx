@@ -10,7 +10,7 @@ export default function Navbar () {
             <div className="font-semibold text-xl">Daily Ritual</div>
             <div className="flex items-center">
                 <div className="px-5 flex gap-5 items-center">
-                    <div>
+                    <div className="w-md">
                         <Searchbar />
                     </div>
                     <div className="flex hover:text-white cursor-pointer text-[#b4b4b4]">
