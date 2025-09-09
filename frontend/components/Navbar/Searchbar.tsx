@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState, useRef } from 'react'
+import { IoSearchOutline } from 'react-icons/io5';
 
 const mockData = ["Drink water", "Read a book", "Meditate", "Workout", "Call a friend", "Finish project"];
 
@@ -69,10 +70,11 @@ const Searchbar = () => {
   return (
     <>
       <div className="relative">
+        <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none"><IoSearchOutline /></span>
         <input
           type='text'
           placeholder={completePlaceholder}
-          className='w-full placeholder:text-sm px-2 py-1.5 pr-10 cursor-pointer rounded-lg transition-all duration-500 bg-[#202020] border-[1px] border-[#5c5c5c] focus:outline-none'
+          className='w-full placeholder:text-sm pl-8 pr-10 py-1.5 cursor-pointer rounded-lg transition-all duration-500 bg-[#202020] border-[1px] border-[#5c5c5c] focus:outline-none'
         />
         <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">⌘ + F</span>
       </div>

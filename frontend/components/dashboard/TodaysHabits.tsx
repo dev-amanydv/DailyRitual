@@ -10,12 +10,15 @@ const TodaysHabits = () => {
     ];
 
   return (
-    <div className="col-span-1 rounded-xl shadow p-6 flex flex-col">
-            <h2 className="text-xl font-semibold mb-4 text-gray-700">Today's Habits</h2>
-            <ul className="space-y-3">
+    <div className="col-span-2 border-[1px] border-neutral-800 bg-[#191919] rounded-xl shadow p-5 flex flex-col">
+            <div className='mb-4'>
+              <h2 className="text-xl font-semibold text-gray-300">Today's Habits</h2>
+              <p className='text-sm text-neutral-500'>Track your daily progress</p>
+            </div>          
+            <ul className="flex flex-col gap-2">
               {mockHabits.map((habit, idx) => (
-                <li key={idx} className="flex items-center justify-between">
-                  <span className="font-medium text-gray-800">{habit.name}</span>
+                <li key={idx} className="flex border-[1px] border-neutral-800 bg-neutral-900 text-sm hover:bg-[#4a4a4a] px-3 rounded-sm items-center justify-between">
+                  <span className="font-medium text-gray-300">{habit.name}</span>
                   {habit.status === "done" ? (
                     <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">Done</span>
                   ) : (

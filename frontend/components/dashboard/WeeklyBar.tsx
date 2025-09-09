@@ -14,13 +14,21 @@ const WeeklyBar = () => {
       ];
 
   return (
-    <div className="col-span-1 rounded-xl shadow p-6 flex flex-col">
-            <h2 className="text-xl font-semibold mb-4 text-gray-700">Weekly Progress</h2>
-            <div className="flex items-end space-x-2 h-40">
-              {mockWeeklyData.map((dayData, idx) => (
-                <AnimatedBar key={idx} completion={dayData.completion} day={dayData.day} />
-              ))}
+    <div className="col-span-2 w-full border-[1px] border-neutral-800 bg-[#191919] rounded-xl shadow p-6 flex flex-col">
+            <div className='mb-4'>
+              <h2 className="text-xl font-semibold text-gray-300">Weekly Activities</h2>
+              <p className='text-sm text-neutral-500'>Check your rank</p>
+            </div>            
+            <div>
+              <div></div>
+              <div className="flex mx-auto items-end space-x-2 h-70">
+                {mockWeeklyData.map((dayData, idx) => (
+                  <AnimatedBar key={idx} completion={dayData.completion} day={dayData.day} />
+                ))}
+              </div>
+              <div></div>
             </div>
+            
           </div>
   )
 }
@@ -62,10 +70,10 @@ function AnimatedBar({ completion, day }: { completion: number; day: string }) {
     }, [isVisible, completion]);
   
     return (
-      <div className="flex flex-col items-center">
+      <div className="flex mx-auto flex-col items-center">
         <div
           ref={barRef}
-          className="w-6 h-32 rounded-md overflow-hidden flex flex-col justify-end"
+          className="w-15 h-60 rounded-md overflow-hidden flex flex-col justify-end"
         >
           <div
             className="bg-blue-500 w-full transition-all"
@@ -75,7 +83,7 @@ function AnimatedBar({ completion, day }: { completion: number; day: string }) {
             }}
           />
         </div>
-        <span className="text-xs text-gray-700 mt-1">{day}</span>
+        <span className="text-xs text-gray-400 mt-1">{day}</span>
       </div>
     );
   }
