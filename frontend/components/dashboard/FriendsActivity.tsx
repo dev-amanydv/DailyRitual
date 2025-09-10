@@ -21,7 +21,7 @@ const FriendsActivity = () => {
               <span className="font-semibold text-blue-700">
                 {activity.name}
               </span>{" "}
-              <span className="text-gray-700">{activity.action}</span>
+              <span className="text-gray-300">{activity.action}</span>
             </span>
             <span className="text-xs text-gray-500">{activity.time}</span>
           </li>

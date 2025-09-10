@@ -15,7 +15,7 @@ const StreaksOverview = () => {
             <ul className="space-y-3">
               {mockStreaks.map((streak, idx) => (
                 <li key={idx} className="flex items-center justify-between">
-                  <span className="text-gray-800">{streak.habit}</span>
+                  <span className="text-gray-300">{streak.habit}</span>
                   <span className="flex items-center text-blue-600 font-bold">
                     🔥 <span className="ml-1">{streak.streak} days</span>
                   </span>

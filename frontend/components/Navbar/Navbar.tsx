@@ -2,6 +2,7 @@ import { IoNotifications } from "react-icons/io5";
 import ProfileBox from "./ProfileBox";
 import { MdOutlineLightMode } from "react-icons/md";
 import Searchbar from "./Searchbar";
+import ThemeToggle from "../Themes/ThemeToggle";
 
 export default function Navbar () {
 
@@ -18,7 +19,7 @@ export default function Navbar () {
                         <div className="size-2 relative -left-2 bg-red-700 rounded-full"></div>
                     </div>
                     <div className="flex hover:text-white cursor-pointer text-[#b4b4b4]">
-                        <MdOutlineLightMode size={23} />
+                        <ThemeToggle />
                     </div>
                 </div>
                 <div className="border-l-[1px] border-[#797979] px-5 ">
